@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var ImageSchema = new Schema({
-  data: String,
+  data: Buffer,
   likeBy : [String],
   like : { type: Number, default: 0}
 });

@@ -92,7 +92,7 @@ exports.show = function(req, res) {
     if (!image) {
       return res.send(404);
     }
-    return res.end(image.data);
+    return res.end(image.data,'binary');
   });
 };
 
@@ -105,8 +105,9 @@ exports.create = function(req, res) {
   }
 
   var newImg = new Image();
-
-  newImg.data = req.body.imgBase64;
+  var imgBuf = new Buffer(req.body.imgBase64,'base64');
+  newImg.data = imgBuf;
+  newImg.contentType = "image/png";
   newImg.save(function(err, img) {
     if (err) return validationError(res, err);
     return res.json(img.id);
