@@ -1,0 +1,86 @@
+[
+    {
+        "id": "5536c2a9ff29490300269a8a",
+        "pseudo": "test",
+        "email": "test",
+        "scores": {
+            "scoreTot": 492,
+            "hsWash": 0,
+            "hsFlash": 123,
+            "hsTrash": 123,
+            "totalHs": 246
+        }
+    },
+    {
+        "id": "553747e478b7aa0300b0b56a",
+        "pseudo": "Charly",
+        "email": "charly@gmail.com",
+        "scores": {
+            "scoreTot": 0,
+            "hsWash": 0,
+            "hsFlash": 0,
+            "hsTrash": 0,
+            "totalHs": 0
+        }
+    },
+    {
+        "id": "55374a1778b7aa0300b0b56b",
+        "pseudo": "Romain",
+        "email": "cerantolo@ce",
+        "scores": {
+            "scoreTot": 0,
+            "hsWash": 0,
+            "hsFlash": 0,
+            "hsTrash": 0,
+            "totalHs": 0
+        }
+    },
+    {
+        "id": "55374a5c78b7aa0300b0b56c",
+        "pseudo": "Laurent",
+        "email": "laurent@lau",
+        "scores": {
+            "scoreTot": 370,
+            "hsWash": 0,
+            "hsFlash": 0,
+            "hsTrash": 124,
+            "totalHs": 124
+        }
+    },
+    {
+        "id": "553753c078b7aa0300b0b571",
+        "pseudo": "charles",
+        "email": "charles@gjs",
+        "scores": {
+            "scoreTot": 0,
+            "hsWash": 0,
+            "hsFlash": 0,
+            "hsTrash": 0,
+            "totalHs": 0
+        }
+    },
+    {
+        "id": "5537561dca33340300f42b2b",
+        "pseudo": "charly",
+        "email": "chalry@asd.com",
+        "scores": {
+            "scoreTot": 0,
+            "hsWash": 0,
+            "hsFlash": 0,
+            "hsTrash": 0,
+            "totalHs": 0
+        }
+    },
+    {
+        "id": "55375a6cca33340300f42b2d",
+        "pseudo": "Christian",
+        "email": "chris@chris",
+        "scores": {
+            "scoreTot": 0,
+            "hsWash": 0,
+            "hsFlash": 0,
+            "hsTrash": 0,
+            "totalHs": 0
+        }
+    }
+]

@@ -1,0 +1,43 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container">
+
+	<div class="btn btn-primary btn-ranking" ng-repeat="tab in tabs" ng-click="showTab(tab.id)">{{tab.title}}</div>
+
+		<hr/>
+		<h3 ng-show="activeTab == 1">Tableau des scores</h3>
+		<!--<pre>Sorting predicate = {{predicate}}; reverse = {{reverse}}</pre>-->
+
+		<table class="table table-striped">
+			<tr>
+				<th ng-show="activeTab == 1"><a ng-click="predicate = 'posTot'; reverse=!reverse">Position</a></th>
+				<th ng-show="activeTab == 2"><a ng-click="predicate = 'posCumul'; reverse=!reverse">Position</a></th>
+				<th ng-show="activeTab == 3"><a ng-click="predicate = 'posWash'; reverse=!reverse">Position</a></th>
+				<th ng-show="activeTab == 4"><a ng-click="predicate = 'posTrash'; reverse=!reverse">Position</a></th>
+				<th ng-show="activeTab == 5"><a ng-click="predicate = 'posFlash'; reverse=!reverse">Position</a></th>
+				<th><a ng-click="predicate = 'pseudo'; reverse=!reverse">Joueurs</a></th>
+				<th ng-show="activeTab == 1">Total</th>
+				<th ng-show="activeTab == 2">Cumul</th>
+				<th ng-show="activeTab == 3">Wash</th>
+				<th ng-show="activeTab == 4">Trash</th>
+				<th ng-show="activeTab == 5">Flash</th>
+				<th>Avatars</th>
+			</tr>
+		   	<tr ng-repeat="player in datas | orderBy: predicate :-reverse">
+		   		<!-- position : juste one at time -->
+		   		<td class="" ng-show="activeTab == 1">{{player.posTot}}</td>
+		   		<td class="" ng-show="activeTab == 2">{{player.posCumul}}</td>
+		   		<td class="" ng-show="activeTab == 3">{{player.posWash}}</td>
+		   		<td class="" ng-show="activeTab == 4">{{player.posTrash}}</td>
+		   		<td class="" ng-show="activeTab == 5">{{player.posFlash}}</td>
+
+		       	<td class="">{{player.pseudo}}</td>
+		       	<td class="" ng-show="activeTab == 1">{{player.scores.scoreTot}} points</td>
+		       	<td class="" ng-show="activeTab == 2">{{player.scores.totalHs}} points</td>
+		       	<td class="" ng-show="activeTab == 3">{{player.scores.hsWash}} points</td>
+		       	<td class="" ng-show="activeTab == 4">{{player.scores.hsTrash}} points</td>
+		       	<td class="" ng-show="activeTab == 5">{{player.scores.hsFlash}} points</td>
+		       	<td class=""><img ng-src="#"></td>
+			</tr>
+		</table>
+</div>

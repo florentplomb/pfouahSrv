@@ -1,0 +1,20 @@
+<div class="ngdialog-message">
+	<h4>{{ngDialogData.question}}</h4>
+
+	<form name="myForm">
+		<label>
+		   <input type="text" name="answer" class="ngdialog-content" ng-model="answer"
+		   ng-maxlength="140" ng-minlength="1" placeholder="votre réponse">
+		</label>
+		<div role="alert">
+		  <span class="error" ng-bind ="feedback"></span>
+		  <span class="error" ng-show="myForm.answer.$error.maxlength">140 charactères maximum !</span>
+		  <span class="error" ng-show="myForm.answer.$error.minlength">1 charactères minimum !</span>
+		</div>
+	</form>
+</div>
+
+<div class="ngdialog-buttons">
+	<button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="closeSecond()">Fermer</button>
+	<button type="submit" class="ngdialog-button ngdialog-button-secondary" ng-click="submitForm(answer)" ng-disabled="myForm.$invalid || myForm.$pristine">Envoyer</button>
+</div>

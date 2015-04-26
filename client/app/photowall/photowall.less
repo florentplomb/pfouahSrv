@@ -1,0 +1,400 @@
+
+@desktop: "only screen and (min-width: 960px) and (max-width: 1199px)";
+@tablet:  "only screen and (min-width: 720px) and (max-width: 959px)";
+
+@nbrPhotosGrand: 10%;
+@nbrPhotosMoyenGrand: 20%;
+@nbrPhotosMoyen: 25%;
+@nbrPhotosMoyenPetit: 33.3333333333334%;
+@nbrPhotosPetit: 50%;
+
+@tailleImage: 200px;
+
+
+@font-face {
+    font-family: 'helsinkiregular';
+    src: url('../assets/fonts/helsinki-webfont.eot');
+    src: url('../assets/fonts/helsinki-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/helsinki-webfont.woff2') format('woff2'),
+         url('../assets/fonts/helsinki-webfont.woff') format('woff'),
+         url('../assets/fonts/helsinki-webfont.ttf') format('truetype'),
+         url('../assets/fonts/helsinki-webfont.svg#helsinkiregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+html{
+	background-color: #7abc87;
+}
+
+.container{
+	width:100%;
+	padding:0;
+	background-color: #7abc87;
+	
+}
+*{
+	
+	overflow-x:hidden;
+}
+
+
+.podium{
+	width:100%;
+	height:500px;
+ 	z-index: 400;
+	background:url('../assets/images/podium.png');
+	// background:url('../assets/images/yeoman.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	
+	
+	
+}
+
+.bestImg{
+	// position: fixed;
+	top:0;
+	width:100%;
+	z-index: 2;
+	
+	.premier{
+		height:@tailleImage;
+		width:100%;
+		// border:2px solid black;
+		top:40px;
+		// background:url('../assets/images/poussin.jpg');
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: @tailleImage; 
+		position: absolute;
+
+	}
+	.deuxieme{
+		height:@tailleImage;
+		width: 100%;
+		position: absolute;
+		top:115px;
+		margin-left: -350px; /* this must be TWICE the required offset distance*/
+    	padding-right: 350px; /* must be the same amount as above */
+		// border:2px solid black;
+		background:url('../assets/images/poussin.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: @tailleImage; 
+		
+	}
+	.troisieme{
+		height:@tailleImage;
+		width:100%;
+		top:150px;
+		margin-left: 350px; /* this must be TWICE the required offset distance*/
+    	padding-right: -350px; /* must be the same amount as above */
+		// border:2px solid black;
+		background:url('../assets/images/poussin.jpg');
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: @tailleImage; 
+		position: absolute;
+		z-index:3;
+	}
+
+}
+
+.winner{
+	width:40px;
+}
+
+// .content-over{
+// 	// width: 100%;
+	
+// 	// position:relative;
+// 	height: 60px;
+// 	width: 100%;
+// 	// sopacity: 0;
+	
+// 	bottom:50px;
+// 	// overflow: hidden;
+
+	
+	
+	
+
+	
+	
+// }
+
+
+
+.googleplay{
+	width:50%;
+	text-align: left;
+
+}
+
+.banniere{
+	position: fixed;
+	top:0;
+	right:0;
+	z-index: 1;
+	width:320px;
+	height: 250px;
+	background-color: #ee7967;
+	border-bottom-left-radius: 2em;
+	color:white;
+	font-family: helsinkiregular;
+	text-align: center;
+	-webkit-box-shadow: -6px 4px 7px -2px rgba(0,0,0,0.18);
+	-moz-box-shadow: -6px 4px 7px -2px rgba(0,0,0,0.18);
+	box-shadow: -6px 4px 7px -2px rgba(0,0,0,0.18);
+	h2{
+		overflow-y: hidden;
+	}
+	.titre{
+		margin-top: 25px;
+		text-decoration: underline;
+	}
+
+}
+
+.img-box{
+	width:100%;
+	position:relative;
+	.img-wall{
+		width:100%;
+		
+		background-size: 100%;
+	}	
+		
+	.button{
+		position: absolute;
+		bottom:0px;
+		width:50%;
+		height: 60px;
+		float:left;
+		opacity: 0.6;
+
+		&:hover{
+			opacity: 1;
+		}
+	}
+	.dislike{
+		left:60%;
+		cursor:pointer;
+		height: auto;
+		width: 20%;
+		bottom:10px;
+
+	}
+
+	.like{
+		cursor:pointer;
+		height: auto;
+		width: 20%;
+		bottom:10px;
+		left:15%;
+	}
+
+	.likesH1{
+		opacity: 0.8;
+		color:white;
+		text-align: center;
+		width:100%;
+		bottom:0px;
+		vertical-align: middle;
+		line-height: 60px;
+		font-family: helsinkiregular;
+	}
+		
+	
+}
+
+.like{
+
+
+}
+
+.dislike{
+
+}
+
+.likesContainer{
+	position: absolute;
+	font-size: 2em;
+	color:white;
+}
+
+
+
+
+
+
+
+/* Portrait iphone 4 and 4s*/ 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+	.deckgrid{
+			width: @nbrPhotosPetit;
+			float:left;
+		}
+
+		.podium{
+			display:none;
+		}
+		.bestImg{
+			display: none;
+		}
+		.banniere{
+			display:none;
+		}
+
+
+
+}
+
+/* Portrait  iphone 5 et 5s*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+	.deckgrid{
+			width: @nbrPhotosPetit;
+			float:left;
+		}
+
+		.podium{
+			display:none;
+		}
+
+		.bestImg{
+			display: none;
+		}
+
+		.banniere{
+			display:none;
+		}
+}
+
+
+/* Portrait and Landscape galxy s4*/
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+	.deckgrid{
+			width: @nbrPhotosPetit;
+			float:left;
+		}
+
+		.podium{
+			display:none;
+		}
+
+		.bestImg{
+			display: none;
+		}
+
+		.banniere{
+			display:none;
+		}
+	
+}
+
+@media screen and (max-width : 500px) {
+		.deckgrid{
+			width: @nbrPhotosPetit;
+			float:left;
+		}
+
+		.podium{
+			display:none;
+		}
+
+		.bestImg{
+			display: none;
+		}
+
+		.banniere{
+			display:none;
+		}
+}
+
+@media screen and (min-width : 500px) and (max-width : 700px) {
+		.deckgrid{
+			width: @nbrPhotosMoyenPetit;
+			float:left;
+		}
+
+		.podium{
+			display:none;
+		}
+
+		.bestImg{
+			display: none;
+		}
+}
+
+@media screen and (min-width : 700px) and (max-width : 1000px) {
+		.deckgrid{
+			width: @nbrPhotosMoyen;
+			float:left;
+		}
+		.podium{
+			display:none;
+		}
+
+		.bestImg{
+			display: none;
+		}
+
+		.banniere{
+			display:none;
+		}
+}
+
+@media screen and (min-width : 1000px) and (max-width : 1900px) {
+		.deckgrid{
+			width: @nbrPhotosMoyenGrand;
+			float:left;
+		}
+}
+
+@media only screen and (min-width : 1900px){
+		.deckgrid{
+			width: @nbrPhotosGrand;
+			float:left;
+		}
+}
+
+
+
+
+
+
+
+
+
+.containerTest{
+	z-index:200;
+	position:relative;
+	.imgTest{
+		width:200px;
+		
+	}
+	.divTest{
+		position:absolute;
+		background-color: red;
+		width:50px;
+		bottom:20px;
+	}
+}

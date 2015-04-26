@@ -5,8 +5,42 @@ angular.module('transmedApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ngDialog',
+  'LocalStorageModule'
 ])
+
+.filter('toArray', function(){
+    return function(obj) {
+        var result = [];
+        angular.forEach(obj, function(val, key) {
+            result.push(val);
+            
+        });
+        return result;
+    };
+})
+
+  .constant('TwitterUrl', 'https://api.twitter.com/1.1/')
+  // .constant('ApiUrl', 'http://pfouah2015.herokuapp.com/')
+  .constant('ApiUrl', 'http://pfouah2015.herokuapp.com/')
+
+  .config(function (localStorageServiceProvider) {
+    localStorageServiceProvider
+      .setPrefix('pfouah')
+      .setStorageType('localStorage')
+      .setNotify(true, true);
+  })
+
+  .config(['$httpProvider', function($httpProvider) {
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+  }])
+
+  .config(['$resourceProvider',function($resourceProvider) {
+    $resourceProvider.defaults.stripTrailingSlashes = false;
+  }])
+
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
       .otherwise('/');
@@ -41,7 +75,7 @@ angular.module('transmedApp', [
     };
   })
 
-  .run(function ($rootScope, $location, Auth) {
+  /*.run(function ($rootScope, $location, Auth) {
     // Redirect to login if route requires auth and you're not logged in
     $rootScope.$on('$stateChangeStart', function (event, next) {
       Auth.isLoggedInAsync(function(loggedIn) {
@@ -50,4 +84,6 @@ angular.module('transmedApp', [
         }
       });
     });
-  });
+  })*/
+
+  ;

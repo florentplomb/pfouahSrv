@@ -1,0 +1,12 @@
+<div class="ngdialog-message">
+	<h4>{{ngDialogData.title}}</h4>
+
+	<video width="400" height="300" controls>
+		<source ng-src="{{ngDialogData.url}}" type="video/mp4">
+		<source ng-src="{{ngDialogData.url}}" type="video/ogg">
+		Your browser does not support the video tag.
+	</video> 
+</div>
+<div class="ngdialog-buttons">
+	<button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="openSecond(ngDialogData)">Suivant</button>
+</div>
