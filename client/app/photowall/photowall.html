@@ -5,7 +5,9 @@
 	<p>Like or dislike your friends !</p> -->
 		
 	<div class="bestImg" ng-repeat="(key, photo) in datas | toArray | orderBy:'-imgId.like' | limitTo:3">
-		<div ng-class="{0:'premier', 1:'deuxieme', 2:'troisieme'}[key]" ng-style="{'background-image':'url({{photo.imgUrl}})'}"></div>
+		<div ng-class="{0:'premier', 1:'deuxieme', 2:'troisieme'}[key]" >
+			<img ng-class="{0:'un', 1:'deux', 2:'trois'}[key]" ng-src="{{photo.imgUrl}}" >
+		</div>
 
 			
 	

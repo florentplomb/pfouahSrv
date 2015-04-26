@@ -22,8 +22,8 @@ angular.module('transmedApp', [
 })
 
   .constant('TwitterUrl', 'https://api.twitter.com/1.1/')
-  // .constant('ApiUrl', 'http://pfouah2015.herokuapp.com/')
   .constant('ApiUrl', 'http://pfouah2015.herokuapp.com/')
+  // .constant('ApiUrl', 'http://localhost:9000/')
 
   .config(function (localStorageServiceProvider) {
     localStorageServiceProvider

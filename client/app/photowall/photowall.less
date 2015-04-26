@@ -59,48 +59,49 @@ html{
 .bestImg{
 	// position: fixed;
 	top:0;
-	width:100%;
+	width:1000px;
+	// background-color: blue;
+	height: 400px;
+	left:0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
 	z-index: 2;
-	
-	.premier{
-		height:@tailleImage;
-		width:100%;
-		// border:2px solid black;
-		top:40px;
-		// background:url('../assets/images/poussin.jpg');
-		background-repeat: no-repeat;
-		background-position: center bottom;
-		background-size: @tailleImage; 
-		position: absolute;
+	position: absolute;
+
+	img{
+		height:200px;
+		width:200px;
+		// margin-left:800px;
+		// background-color: red;
+		border-radius: 15px;
+		border:6px solid #575757;
+		// position:relative;
+		// margin-left:30%;
+		
 
 	}
-	.deuxieme{
-		height:@tailleImage;
-		width: 100%;
-		position: absolute;
-		top:115px;
-		margin-left: -350px; /* this must be TWICE the required offset distance*/
-    	padding-right: 350px; /* must be the same amount as above */
-		// border:2px solid black;
-		background:url('../assets/images/poussin.jpg');
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: @tailleImage; 
+	.premier{
+		overflow-y: hidden;
 		
+		margin-top: 36px;
+		margin-left: 401px;
+	}
+	.deuxieme{
+		
+		 
+		// border:2px solid black;
+		margin-left: 60px;
+		margin-top:105px;
+		
+		overflow-y: hidden;
 	}
 	.troisieme{
-		height:@tailleImage;
-		width:100%;
-		top:150px;
-		margin-left: 350px; /* this must be TWICE the required offset distance*/
-    	padding-right: -350px; /* must be the same amount as above */
-		// border:2px solid black;
-		background:url('../assets/images/poussin.jpg');
-		background-repeat: no-repeat;
-		background-position: center top;
-		background-size: @tailleImage; 
-		position: absolute;
+		
 		z-index:3;
+		margin-top: 137px;
+		margin-left: 740px;
+		overflow-y: hidden;
 	}
 
 }
@@ -164,6 +165,7 @@ html{
 .img-box{
 	width:100%;
 	position:relative;
+	// border-top: 10px solid white;
 	.img-wall{
 		width:100%;
 		

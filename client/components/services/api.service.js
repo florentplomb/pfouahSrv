@@ -91,7 +91,8 @@ angular.module('transmedApp')
 			getCode: function(callback, errorCallback){
 				$http({
 					method: 'GET',
-					url: 'http://pfouah2015.herokuapp.com/api/limitLikes'
+					url: 'http://localhost:9000/api/limitLikes'
+					// url: 'http://pfouah2015.herokuapp.com/api/limitLikes'
 				}).success(function (data){
 					// renvoie data.code = 'eai031429712519415eai03' par ex.
 					callback(data);
