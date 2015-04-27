@@ -76,6 +76,9 @@ html{
 		// background-color: red;
 		border-radius: 15px;
 		border:6px solid #575757;
+		&:hover{
+			z-index:-4;
+		}
 		// position:relative;
 		// margin-left:30%;
 		
@@ -98,10 +101,11 @@ html{
 	}
 	.troisieme{
 		
-		z-index:3;
+		z-index:300;
 		margin-top: 137px;
 		margin-left: 740px;
 		overflow-y: hidden;
+
 	}
 
 }
@@ -138,7 +142,7 @@ html{
 }
 
 .banniere{
-	position: fixed;
+	position: absolute;
 	top:0;
 	right:0;
 	z-index: 1;
@@ -152,6 +156,9 @@ html{
 	-webkit-box-shadow: -6px 4px 7px -2px rgba(0,0,0,0.18);
 	-moz-box-shadow: -6px 4px 7px -2px rgba(0,0,0,0.18);
 	box-shadow: -6px 4px 7px -2px rgba(0,0,0,0.18);
+	&:hover{
+		z-index:400;
+	}
 	h2{
 		overflow-y: hidden;
 	}
@@ -161,6 +168,8 @@ html{
 	}
 
 }
+
+
 
 .img-box{
 	width:100%;
@@ -343,6 +352,10 @@ html{
 
 		.bestImg{
 			display: none;
+		}
+
+		.banniere{
+			display:none;
 		}
 }
 

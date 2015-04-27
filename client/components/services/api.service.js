@@ -15,7 +15,7 @@ angular.module('transmedApp')
 					errorCallback(data);
 				});
 			},
-		
+
 			getUsers : function(callback, errorCallback){
 				$http({
 					method: 'GET',
@@ -25,18 +25,7 @@ angular.module('transmedApp')
 					console.log(data);
 				}).error(function (data){
 					errorCallback(data);
-				});				
-			},
-
-			getCode: function(callback, errorCallback){
-				$http({
-					method: 'GET',
-					url: ApiUrl + 'api/limitLikes'
-				}).success(function (data){
-					callback(data);
-				}).error(function (data){
-					errorCallback(data);
-				});	
+				});
 			},
 
 			likeImage: function(id, vote, callback, errorCallback){
@@ -48,7 +37,7 @@ angular.module('transmedApp')
 					callback(data);
 				}).error(function (data){
 					errorCallback(data);
-				});	
+				});
 			}
 		};
 	})
@@ -85,20 +74,9 @@ angular.module('transmedApp')
 					callback(data);
 				}).error(function (data){
 					errorCallback(data);
-				});				
-			},
-
-			getCode: function(callback, errorCallback){
-				$http({
-					method: 'GET',
-					url: 'http://localhost:9000/api/limitLikes'
-					// url: 'http://pfouah2015.herokuapp.com/api/limitLikes'
-				}).success(function (data){
-					// renvoie data.code = 'eai031429712519415eai03' par ex.
-					callback(data);
-				}).error(function (data){
-					errorCallback(data);
-				});	
+				});
 			}
+
+
 		};
 	});
