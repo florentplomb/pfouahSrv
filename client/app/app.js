@@ -15,16 +15,16 @@ angular.module('transmedApp', [
         var result = [];
         angular.forEach(obj, function(val, key) {
             result.push(val);
-            
+
         });
         return result;
     };
 })
 
-  .constant('TwitterUrl', 'https://api.twitter.com/1.1/')
+ // .constant('TwitterUrl', 'https://api.twitter.com/1.1/')
   // .constant('ApiUrl', 'http://pfouah2015.herokuapp.com/')
-  .constant('ApiUrl', 'http://pfouah.comem.ch/')
-  // .constant('ApiUrl', 'http://localhost:9000/')
+ // .constant('ApiUrl', 'http://pfouah.comem.ch/')
+   .constant('ApiUrl', 'http://localhost:9000/')
 
   .config(function (localStorageServiceProvider) {
     localStorageServiceProvider

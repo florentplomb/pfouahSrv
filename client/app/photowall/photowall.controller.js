@@ -27,8 +27,8 @@ angular.module('transmedApp')
 				$scope.datas = data;
 
 				for (var i = $scope.datas.length - 1; i >= 0; i--) {
-					$scope.datas[i].imgUrl = 'http://pfouah.comem.ch/api/images/' + data[i].imgId._id;
-					// $scope.datas[i].imgUrl = 'http://localhost:9000/api/images/' + data[i].imgId._id;
+					//$scope.datas[i].imgUrl = 'http://pfouah.comem.ch/api/images/' + data[i].imgId._id;
+					 $scope.datas[i].imgUrl = 'http://localhost:9000/api/images/' + data[i].imgId._id;
 					// $scope.datas[i].imgUrl = 'http://pfouah2015.herokuapp.com/api/images/' + data[i].imgId._id;
 					// $log.debug($scope.datas[i].imgUrl);
 
@@ -79,8 +79,8 @@ angular.module('transmedApp')
 
 						$http({
 							method: 'POST',
-							// url: 'http://localhost:9000/api/images/' +photo.imgId._id + '/liked',
-							url: 'http://pfouah.comem.ch/api/images/' +photo.imgId._id + '/liked',
+							 url: 'http://localhost:9000/api/images/' +photo.imgId._id + '/liked',
+							//url: 'http://pfouah.comem.ch/api/images/' +photo.imgId._id + '/liked',
 							// url: 'http://pfouah2015.herokuapp.com/api/images/' +photo.imgId._id + '/liked',
 							data: vote
 						}).success(function (data){
@@ -121,7 +121,7 @@ angular.module('transmedApp')
 					      }
 						$http({
 							method: 'POST',
-							url: 'http://pfouah.comem.ch/api/images/' +photo.imgId._id + '/liked',
+							url: 'http://localhost:9000/api/images/' +photo.imgId._id + '/liked',
 							// url: 'http://pfouah2015.herokuapp.com/api/images/' +photo.imgId._id + '/liked',
 							data: vote
 						}).success(function (data){

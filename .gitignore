@@ -3,6 +3,7 @@ node_modules
 .idea
 client/bower_components
 /dist
+/img
 /server/config/local.env.js
 imageTest
 npm-debug.log

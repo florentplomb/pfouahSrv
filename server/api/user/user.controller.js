@@ -265,8 +265,6 @@ function scoreUsersData(req, res, next, callback) {
 
               for (var y = 0; y < scs.length; y++) {
 
-
-
                 if (scs[y].gameName === "trash") {
 
                   var ptsTrash = scs[y].pts * 1.4
@@ -290,8 +288,6 @@ function scoreUsersData(req, res, next, callback) {
 
 
               }
-
-
               usr.id = users[i].id;
               usr.pts = scsTot;
               usersScore.push(usr);

@@ -4,10 +4,14 @@ var express = require('express');
 var controller = require('./image.controller');
 var auth = require('../../auth/auth.service');
 
+
 var router = express.Router();
 
 
 router.get('/',controller.index);
+router.get('/min',controller.min);
+router.get('/resize',controller.resize);
+router.get('/size',controller.size);
 router.get('/:id',controller.show);
 router.post('/',controller.create);
 router.post('/:id/liked',controller.liked);
